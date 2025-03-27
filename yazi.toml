@@ -1,0 +1,43 @@
+# yazi.toml
+
+[manager]
+sort_by = "natural"
+sort_dir_first = true
+linemode = "mtime"
+show_hidden = true
+# sort_by = "modified"
+
+[preview]
+wrap = "yes"
+tab_size = 2
+
+[opener]
+reveal2 = [
+    { run = 'hexyl "$@" | $PAGER -r', desc = "Hexyl", block = true, for = "unix"},
+    { run = 'vim "$@"', desc = "Vim edit", block = true, for = "unix"},
+    { run = 'vim -R "$@"', desc = "Vim readonly", block = true, for = "unix"}
+
+    ]
+
+
+[open]
+prepend_rules = [
+    { mime = "application/hta", use = [ "edit" , "reveal" ] }
+]
+append_rules = [
+    { name = "*", use = [ "open", "reveal", "reveal2" ] }
+]
+[plugin]
+prepend_previewers = [
+    { name = "*.md", run = "glow" },
+    { name = "*.idb", run = "noop" },
+    { name = "*.i64", run = "noop" },
+    { name = "*.yar", run = "code" },
+    { name = "*.yara", run = "code" },
+    { mime = "application/hta", run = "code" },
+    { name = "*.ps1", run = "code" },
+    { mime = "application/octet-stream", run = "hexyl" },
+    ]
+
+append_previewers = [
+]

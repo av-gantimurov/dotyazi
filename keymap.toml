@@ -1,0 +1,54 @@
+[[manager.prepend_keymap]]
+on = [ "!" ]
+run = 'shell "$SHELL" --block --confirm'
+desc = "Open shell here"
+
+[[manager.prepend_keymap]]
+on = [ "n" ]
+run = "plugin bookmarks save"
+desc = "Save current position as a bookmark"
+
+[[manager.prepend_keymap]]
+on = [ "'" ]
+run = "plugin bookmarks jump"
+desc = "Jump to a bookmark"
+
+[[manager.prepend_keymap]]
+on = [ "b", "d" ]
+run = "plugin bookmarks delete"
+desc = "Delete a bookmark"
+
+[[manager.prepend_keymap]]
+on = [ "b", "D" ]
+run = "plugin bookmarks delete_all"
+desc = "Delete all bookmarks"
+
+# [[manager.prepend_keymap]]
+# on   = [ "<Enter>" ]
+# run  = "plugin --sync smart-enter"
+# desc = "Enter the child directory, or open the file"
+
+# [[manager.prepend_keymap]]
+# on  = [ "'", "W" ]
+# run = "cd /media/stor/wiki"
+# desc = "Goto WIKI"
+#
+# [[manager.prepend_keymap]]
+# on  = [ "'", "a" ]
+# run = "cd ~/work/apt"
+# desc = "Goto APT"
+#
+# [[manager.prepend_keymap]]
+# on  = [ "'", "s" ]
+# run = "cd ~/share"
+# desc = "Goto shared folder"
+#
+# [[manager.prepend_keymap]]
+# on  = [ "'", "w" ]
+# run = "cd ~/work/2025"
+# desc = "Goto work folder"
+
+
+[[manager.prepend_keymap]]
+on  = "M"
+run = "plugin mount"
