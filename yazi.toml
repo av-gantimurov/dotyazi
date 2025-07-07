@@ -29,14 +29,14 @@ append_rules = [
 ]
 [plugin]
 prepend_previewers = [
-    { name = "*.md", run = "glow" },
+    { name = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"' },
     { name = "*.idb", run = "noop" },
     { name = "*.i64", run = "noop" },
     { name = "*.yar", run = "code" },
     { name = "*.yara", run = "code" },
     { mime = "application/hta", run = "code" },
     { name = "*.ps1", run = "code" },
-    { mime = "application/octet-stream", run = "hexyl" },
+    { mime = "application/octet-stream", run = 'piper -- hexyl --border=none --terminal-width=$w "$1"' },
     ]
 
 append_previewers = [
