@@ -1,3 +1,4 @@
+require("git"):setup()
 require("simple-status"):setup()
 require("yatline"):setup({
    show_background = false,
