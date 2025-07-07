@@ -1,5 +1,5 @@
 require("simple-status"):setup()
---[[ require("yatline"):setup({
+require("yatline"):setup({
    show_background = false,
 
    header_line = {
@@ -52,6 +52,6 @@ require("simple-status"):setup()
       }
    },
 })
-]]--
 
---[[require("yatline-symlink"):setup() ]]--
+
+-- require("yatline-symlink"):setup()
