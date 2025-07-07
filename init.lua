@@ -1,6 +1,5 @@
 require("simple-status"):setup()
-
-require("yatline"):setup({
+--[[ require("yatline"):setup({
    show_background = false,
 
    header_line = {
@@ -53,11 +52,6 @@ require("yatline"):setup({
       }
    },
 })
+]]--
 
-require("yatline-symlink"):setup()
-require("bookmarks"):setup({
-   persist = "vim",
-   desc_format = "full",
-   file_pick_mode = "parent",
-   notify = { enable = true, },
-})
+--[[require("yatline-symlink"):setup() ]]--

@@ -1,22 +1,12 @@
 [[plugin.deps]]
-use = "lpanebr/yazi-plugins:yatline-symlink"
-rev = "ca18a2c"
-hash = "32939ad5b4738c2595a904997fd30ea6"
-
-[[plugin.deps]]
 use = "Ape/simple-status"
 rev = "d0da104"
 hash = "68603fdd1dcaf415227e2c77a9317947"
 
 [[plugin.deps]]
-use = "dedukun/bookmarks"
-rev = "95b2c58"
-hash = "17a094653b7d0db4ac68ed531d2e1412"
-
-[[plugin.deps]]
 use = "imsi32/yatline"
-rev = "6b0fc1e"
-hash = "ab115c6cc77f5710c27f39dfa2f3d4d"
+rev = "88bd1c5"
+hash = "981acbe9b758b1af3a8154c932bb936d"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mount"
