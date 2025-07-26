@@ -16,3 +16,13 @@ desc = "Maximize or restore the preview pane"
 on  = [ "g", "m"]
 run = 'cd "/run/media/$USER"'
 desc = "Go to mount folder"
+
+[[mgr.prepend_keymap]]
+on  = [ "g", "s"]
+run = 'cd "$HOME/share"'
+desc = "Go to share folder"
+
+[[mgr.prepend_keymap]]
+on  = [ "g", "w"]
+run = 'cd "$HOME/work/2025/"'
+desc = "Go to work folder"
