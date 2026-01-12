@@ -34,6 +34,8 @@ prepend_previewers = [
     { name = "*.i64", run = "noop" },
     { name = "*.yar", run = "code" },
     { name = "*.yara", run = "code" },
+    { name = "*.eml", run = "code" },
+    { name = "message/rfc822", run = "code" },
     { mime = "application/hta", run = "code" },
     { name = "*.ps1", run = "code" },
     { mime = "application/octet-stream", run = 'piper -- hexyl --border=none --terminal-width=$w "$1"' },

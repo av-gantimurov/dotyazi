@@ -10,23 +10,23 @@ hash = "981acbe9b758b1af3a8154c932bb936d"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mount"
-rev = "2bf70d8"
-hash = "dd97eede8e20e59cd2604e8006e470e2"
+rev = "75f6f72"
+hash = "e2d4bfccf31e5ab05f46fee4797c5215"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:piper"
-rev = "b886025"
-hash = "2143a53182dbbe935a1abd1623424aa5"
+rev = "75f6f72"
+hash = "954922c883778c19c4a2dad5be08787f"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "b886025"
-hash = "63b6c222bf2103b3023389dde5e2ecfe"
+rev = "75f6f72"
+hash = "36a484acf6a0a0219c543ccb4cee218f"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:toggle-pane"
-rev = "b886025"
-hash = "d6f60c24d8c0cf57a855bf46115b2502"
+rev = "75f6f72"
+hash = "8a7c58225816a163a6e8730c0adafbc8"
 
 [flavor]
 deps = []
