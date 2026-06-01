@@ -12,32 +12,45 @@ wrap = "yes"
 tab_size = 2
 
 [opener]
-reveal2 = [
-    { run = 'hexyl "$@" | $PAGER -r', desc = "Hexyl", block = true, for = "unix"},
+vim = [
     { run = 'vim "$@"', desc = "Vim edit", block = true, for = "unix"},
     { run = 'vim -R "$@"', desc = "Vim readonly", block = true, for = "unix"}
 
+    ]
+hexyl = [
+    { run = 'hexyl "$@" | $PAGER -r', desc = "Hexyl", block = true, for = "unix"},
+    ]
+
+
+diec = [
+    { run = 'die "$@"', desc="DIE gui", orphan = true},
+    { run = 'diec --heuristicscan --verbose "$@" | $PAGER -r', desc="DIE console", block = true, for = "unix"},
+    ]
+
+floss = [
+    { run = 'floss --only static -- "$@" | $PAGER -r', desc = "Floss", block = true, for = "unix"},
     ]
 
 
 [open]
 prepend_rules = [
-    { mime = "application/hta", use = [ "edit" , "reveal" ] }
+    { mime = "application/hta", use = [ "edit" , "reveal" ] },
 ]
 append_rules = [
-    { name = "*", use = [ "open", "reveal", "reveal2" ] }
+    { url = "*", use = [ "open", "reveal", "hexyl", "diec", "vim", "floss" ] }
 ]
 [plugin]
 prepend_previewers = [
-    { name = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"' },
-    { name = "*.idb", run = "noop" },
-    { name = "*.i64", run = "noop" },
-    { name = "*.yar", run = "code" },
-    { name = "*.yara", run = "code" },
-    { name = "*.eml", run = "code" },
-    { name = "message/rfc822", run = "code" },
+    { url = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"' },
+    { url = "*.idb", run = "noop" },
+    { url = "*.i64", run = "noop" },
+    { url = "*.yar", run = "code" },
+    { url = "*.yara", run = "code" },
+    { url = "*.eml", run = "code" },
+    { url = "*.bin", run = 'piper -- hexyl --border=none --terminal-width=$w "$1"' },
+    { url = "*.ps1", run = "code" },
+    { mime = "message/rfc822", run = "code" },
     { mime = "application/hta", run = "code" },
-    { name = "*.ps1", run = "code" },
     { mime = "application/octet-stream", run = 'piper -- hexyl --border=none --terminal-width=$w "$1"' },
     ]
 
@@ -45,11 +58,11 @@ append_previewers = [
 ]
 
 [[plugin.prepend_fetchers]]
-id   = "git"
-name = "*"
+group = "git"
+url = "*"
 run  = "git"
 
 [[plugin.prepend_fetchers]]
-id   = "git"
-name = "*/"
+group = "git"
+url = "*/"
 run  = "git"

@@ -24,5 +24,20 @@ desc = "Go to share folder"
 
 [[mgr.prepend_keymap]]
 on  = [ "g", "w"]
-run = 'cd "$HOME/work/2025/"'
+run = 'cd "$HOME/work/2026/"'
 desc = "Go to work folder"
+
+[[mgr.prepend_keymap]]
+on  = [ "g", "p"]
+run = 'cd "$HOME/work/publications/"'
+desc = "Go to publications folder"
+
+[[mgr.prepend_keymap]]
+on  = [ "g", "W"]
+run = 'cd "$HOME/wiki"'
+desc = "Go to WIKI folder"
+
+[[mgr.prepend_keymap]]
+on  = [ "g", "y"]
+run = 'cd "$HOME/work/yara"'
+desc = "Go to YARA folder"
